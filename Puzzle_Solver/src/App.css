@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Puzzle_Solver";
-  src: url("public/geoplace/Geoplace-Bold.ttf");
+  src: url("/geoplace/Geoplace-Bold.ttf");
 }
 * {
   margin: 0;
