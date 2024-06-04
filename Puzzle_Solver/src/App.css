@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Puzzle_Solver";
+  src: url("public/geoplace/Geoplace-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #ff9eaa 20%, #ffd0d0 70%);
+}
+.App h1 {
+  font-family: "Puzzle_Solver";
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 3rem;
+}
+
+.number-tile {
+  background-color: #111;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  filter: blur(10);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+number-tile.dragging {
+  opacity: 0.5;
+}
+
+.number-tile.active {
+  background-color: rgba(142, 3, 93, 0.401);
+}
+.tile-content {
+  padding: 10px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.success-message{
+  font-size: 2rem;
+  color: #1759198e;
+  font-weight: bolder;
+  font-family: "Puzzle_Solver";
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
