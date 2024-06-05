@@ -1,14 +1,25 @@
-import './App.css'
-import NumberGrid from './components/NumberGrid'
-
+import React, { useState } from "react";
+import Login from "./screen/Login";
+import NumberGrid from "./components/NumberGrid";
+import "./App.css";
 function App() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmission = (value) => {
+    setSubmitted(value);
+  };
 
   return (
-    <div className='App'>
-    <h1>Puzzle Solver</h1>
-    <NumberGrid/>
-    </div>
-  )
+    <>
+      {!submitted && <Login onSubmission={handleSubmission} />}
+      {submitted && (
+        <div className="App">
+          <h1>Puzzle Solver</h1>
+          <NumberGrid />
+        </div>
+      )}
+    </>
+  );
 }
 
-export default App
+export default App;
