@@ -15,8 +15,10 @@ export default function Login({ onSubmission }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Name:", name, "Email:", email);
-    onSubmission(true);
+    console.log(name, email);
+    if (name != "" || email != "") {
+      onSubmission(true);
+    }
   };
 
   return (
@@ -54,7 +56,7 @@ const LogoDiv = styled.div`
 const LogoName = styled.div`
   font-family: Puzzle_Solver;
   color: #111;
-  font-size: 2rem;
+  font-size: 3rem;
   white-space: nowrap;
   overflow-x: hidden;
   /* box-shadow:0 10px 10px rgba(0,0,0,0.1); */

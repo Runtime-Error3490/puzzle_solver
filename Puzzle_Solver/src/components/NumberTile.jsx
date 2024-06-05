@@ -1,6 +1,6 @@
 import React from "react";
 import { useDrag, useDrop } from "react-dnd";
-
+import "./NumberTile.css";
 export default function NumberTile({ index, number, handleDrop }) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "NUMBER_TILE",

@@ -2,6 +2,10 @@
   font-family: "Puzzle_Solver";
   src: url("/geoplace/Geoplace-Bold.ttf");
 }
+@font-face {
+  font-family: "Number";
+  src: url("cause/fonts/ttf/Cause-Regular.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +45,7 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 number-tile.dragging {
-  opacity: 0.5;
+  opacity:0;
 }
 
 .number-tile.active {
@@ -50,7 +54,7 @@ number-tile.dragging {
 .tile-content {
   padding: 10px;
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Number";
 }
 
 .success-message{
