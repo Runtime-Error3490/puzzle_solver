@@ -10,9 +10,9 @@ function FirstRenderPage() {
       <nav className="navbar_head">
         <div  className="navbar_title">Puzzle Solver</div>
         <ul className="navbar_options">
-          <a href="/home"><IoSettingsOutline /></a>
-          <a href="/about"><MdOutlineLeaderboard /></a>
-          <a href="/contact"><CgProfile /></a>
+          <a href="/home" title="Settings"><IoSettingsOutline /></a>
+          <a href="/about" title="LeaderBoard"><MdOutlineLeaderboard /></a>
+          <a href="/contact" title="Profile "><CgProfile /></a>
         </ul>
       </nav>
     </section>
