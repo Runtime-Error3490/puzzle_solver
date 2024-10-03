@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url(./death-star-font/DeathStar-VmWB.ttf);
+}
+@font-face {
+    font-family:'SpaceGrotesk1';
+    src: url(./threads-clube-font/ThreadsClube-vndmL.ttf);
+}
+body{
+    background-color: #FFF7D1;
+}
+.navbar_head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:1rem;
+    background-color: #FFECC8;
+    box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar_title{
+    font-family: 'SpaceGrotesk';        
+    font-size: 2.5rem; 
+}
+.navbar_options{
+    font-family: 'SpaceGrotesk1';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem; 
+    font-size: 2.2rem;
+}
+a{
+    text-decoration: none;
+    color: #75635ac0;
+}
