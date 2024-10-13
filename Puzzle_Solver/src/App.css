@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @font-face {
   font-family: "Puzzle_Solver";
   src: url("/geoplace/Geoplace-Bold.ttf");

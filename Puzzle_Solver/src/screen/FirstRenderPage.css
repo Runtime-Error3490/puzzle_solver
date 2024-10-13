@@ -7,14 +7,13 @@
     src: url(./threads-clube-font/ThreadsClube-vndmL.ttf);
 }
 body{
-    background-color: #FFF7D1;
+    background-color: #FEFBD8;
 }
 .navbar_head{
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding:1rem;
-    background-color: #FFECC8;
     box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1);
 }
 .navbar_title{
