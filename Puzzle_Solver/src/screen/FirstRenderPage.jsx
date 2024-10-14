@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineLeaderboard } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -6,11 +6,14 @@ import { FaSquareGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./FirstRenderPage.css";
+import ProfilePage from "./ProfilePage";
 
 function FirstRenderPage() {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const openProfileModal = () => setIsProfileOpen(true);
+  const closeProfileModal = () => setIsProfileOpen(false);
   return (
     <>
-      {/* Navbar Section */}
       <section>
         <nav className="navbar_head shadow-md bg-white w-full">
           <div className="navbar_title text-2xl font-bold p-4">
@@ -36,13 +39,13 @@ function FirstRenderPage() {
               </Link>
             </li>
             <li>
-              <Link
-                to="/profile"
+              <button
+                onClick={openProfileModal}
                 title="Profile"
                 className="hover:scale-110 transition-transform"
               >
                 <CgProfile size={30} />
-              </Link>
+              </button>
             </li>
           </ul>
         </nav>
@@ -58,6 +61,22 @@ function FirstRenderPage() {
             New Game
           </Link>
         </div>
+        <div className="w-fit h-fit">
+          <Link
+            to="/stats"
+            className="px-6 py-3 rounded-2xl shadow-lg border border-green-100 font-bold bg-transparent active:shadow-sm active:translate-y-1 transition-all duration-200"
+          >
+            Stats
+          </Link>
+        </div>
+        <div className="w-fit h-fit">
+          <Link
+            to="/rules"
+            className="px-6 py-3 rounded-2xl shadow-lg border border-green-100 font-bold bg-transparent active:shadow-sm active:translate-y-1 transition-all duration-200"
+          >
+            Rules
+          </Link>
+        </div>
       </section>
 
       {/* Footer Section */}
@@ -65,6 +84,7 @@ function FirstRenderPage() {
         <FaSquareGithub />
         <FaLinkedin />
       </footer>
+      {isProfileOpen && <ProfilePage onClose={closeProfileModal} />}
     </>
   );
 }

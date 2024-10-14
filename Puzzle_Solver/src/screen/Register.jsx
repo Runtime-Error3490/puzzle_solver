@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-export default function Login() {
+
+export default function Register() {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    if (name === "email") {
+    if (name === "username") {
+      setUsername(value);
+    } else if (name === "email") {
       setEmail(value);
     } else if (name === "password") {
       setPassword(value);
@@ -15,56 +19,64 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(password, email);
-    if (password != "" || email != "") {
-      alert("You are signed in");
+    if (username !== "" && email !== "" && password !== "") {
+      alert("You have successfully registered");
     }
   };
 
   return (
     <LogoDiv>
-      <LogoName>Welcome To the Puzzle Solver</LogoName>
+      <LogoName>Register to Play a New Game</LogoName>
       <StyledFormik>
-        <StyledForm>
+        <StyledForm onSubmit={handleSubmit}>
+          <StyledField
+            type="text"
+            name="username"
+            placeholder="Your Username"
+            onChange={handleInputChange}
+            required
+          />
           <StyledField
             type="email"
             name="email"
             placeholder="Your Email"
             onChange={handleInputChange}
+            required
           />
           <StyledField
             type="password"
             name="password"
             placeholder="Your Password"
             onChange={handleInputChange}
+            required
           />
-          <StyledButton type="submit" onClick={handleSubmit}>
-            Submit to start the Puzzle
-          </StyledButton>
+          <StyledButton type="submit">Register</StyledButton>
         </StyledForm>
       </StyledFormik>
     </LogoDiv>
   );
 }
+
 const LogoDiv = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   margin-top: 20vh;
-  user-select:none;
+  user-select: none;
 `;
+
 const LogoName = styled.div`
   font-family: Puzzle_Solver;
   color: #111;
   font-size: 3rem;
   white-space: nowrap;
   overflow-x: hidden;
-  /* box-shadow:0 10px 10px rgba(0,0,0,0.1); */
-  /* filter: drop-shadow(0 0 0.75rem #FF0000); */
   filter: blur(0.3px);
 `;
+
 const StyledFormik = styled.div``;
+
 const StyledForm = styled.form`
   width: 80vh;
   height: 1rem;

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url(./death-star-font/DeathStar-VmWB.ttf);
+}
+@font-face {
+    font-family:'SpaceGrotesk1';
+    src: url(./threads-clube-font/ThreadsClube-vndmL.ttf);
+}
+.register-text{
+    font-family: 'Puzzle_Solver';
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.form-data{
+    font-family: 'spaceGrotesk';
+}
